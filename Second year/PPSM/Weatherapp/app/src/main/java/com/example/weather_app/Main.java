@@ -19,6 +19,9 @@ public class Main {
     @SerializedName("temp_max")
     String temp_max;
 
+    @SerializedName("icon")
+    String icon;
+
     public String getTemp() {
         return temp;
     }
@@ -57,6 +60,14 @@ public class Main {
 
     public void setTemp_max(String temp_max) {
         this.temp_max = temp_max;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 }
 
