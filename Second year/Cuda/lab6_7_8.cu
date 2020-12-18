@@ -212,15 +212,18 @@ int main(void) {
 
     cudaMemcpy(arrayOut, d_output, numOutputElements *sizeof(int), cudaMemcpyDeviceToHost);
  
-    cout << "Index 0 of array (sum): " << arrayOut[0] ;
+    // WYPISANIE TABLICY
+    cout << "Index 0 otrzmanej tablicy (suma): " << arrayOut[0] ;
 
 
-    cout << endl <<"Host array : ";
+    // WYPISANIE TABLICY device
+    cout << endl <<"Tablica host : ";
     for (int i = 0; i < SIZE; i++) {
         cout << arrayIn[i]<< " ";
     }
-    cout<<endl<<"Sum on host: " << sum << endl;
+    cout<<endl<<"Suma obliczona na host: " << sum << endl;
  
+    // ZWOLNIENIE PAMIECI
     free(arrayIn);
     free(arrayOut);
 
