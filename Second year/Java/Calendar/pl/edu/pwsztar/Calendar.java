@@ -7,23 +7,8 @@ public class Calendar {
     Months month ;
     int year;
 
-    public String toString(int type) {
-
-        if (type == 1){
-            return (this.getDayName()+", "+day+" "+month.getName()+" "+year);
-        }
-
-        else if (type == 2){
-            return (day+"-"+month.getName()+"-"+year);
-        }
-        else{
-            if (day<10){
-                return ("0"+day+"/"+month.getName()+"/"+year);
-            }
-            else
-                return (day+"/"+month.getName()+"/"+year);
-        }
-
+    public String toString() {
+            return (day+"/"+month.getName()+"/"+year);
     }
 
     Calendar(int d,int m, int y){
@@ -139,5 +124,38 @@ public class Calendar {
         return "Monday";
 
     }
+
+    public static final int DATEFORMAT_LONG = 56524202;
+    public static final int DATEFORMAT_SHORT = 23562690;
+    public static final int DATEFORMAT_CLASSIC = 12526392;
+    public static final int DATEFORMAT_ROMAN = 62697301;
+
+    public String getDateInFormat(int dateFormat){
+
+        String str = "";
+
+        switch (dateFormat){
+
+            case 56524202:
+                str = this.getDayName() + ", " + this.day + " " + this.month.getName() + " " + this.year;
+                break;
+            case 23562690:
+                str = this.day + " " + this.month.getName() + " " + this.year;
+                break;
+            case 12526392:
+                str = this.getDayName().substring(0,2) + "., " + this.day + "-" + this.month.getName().substring(0,3) + "-" + this.year;
+                break;
+            case 62697301:
+                if (this.day<10)
+                    str += "0";
+                str += this.day + "." + this.month.getRomanName() + "." + this.year;
+        }
+
+        return str;
+
+    }
+
+
+
 
 }
