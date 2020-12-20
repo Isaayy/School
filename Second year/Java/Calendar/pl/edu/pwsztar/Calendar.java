@@ -2,15 +2,29 @@ package pl.edu.pwsztar;
 
 import java.time.Month;
 
-public class Calendar {
+/**
+ * Object that store given date in specific format
+ *
+ * @author Jakub Serwin
+ */
+public class Calendar implements Comparable<Calendar>{
     int day;
     Months month ;
     int year;
 
+
+
+    /**
+     * toString method which allow us to print our object in specific format
+     * * * @return      DD/Month/YYYY
+     */
     public String toString() {
             return (day+"/"+month.getName()+"/"+year);
     }
 
+    /**
+     * Class constructor.
+     */
     Calendar(int d,int m, int y){
         if (d > month.getMonth(m).getDays() || d < 1 ) {
             throw new dataError("Wrong days number");
@@ -23,6 +37,10 @@ public class Calendar {
 
     }
 
+    /**
+     * Method which move current date week forward
+     *
+     */
     public void weekForward() {
         if ((this.day + 7) > month.getDays()){
             if ( (month.getName() == "February") && (year % 4 == 0 && ((year%100==0&&year%400==100)  ||  year % 100 != 0 ) )) { // leap year
@@ -43,6 +61,9 @@ public class Calendar {
             this.day += 7;
     }
 
+    /**
+     * Method which move current date week backward
+     */
     public void weekBackward() {
         if (this.day-7 < 1){
             if (this.month.getOrder()-1 < 1) {
@@ -63,6 +84,10 @@ public class Calendar {
         }
     }
 
+    /**
+     * Methods which allow to get day name by reference date : 30.11.2020 which is Monday
+     * * @return      day name
+     */
     public boolean goForward(Calendar referenceDate){
         if (this.year > referenceDate.year)
             return true;
@@ -125,11 +150,16 @@ public class Calendar {
 
     }
 
+
     public static final int DATEFORMAT_LONG = 56524202;
     public static final int DATEFORMAT_SHORT = 23562690;
     public static final int DATEFORMAT_CLASSIC = 12526392;
     public static final int DATEFORMAT_ROMAN = 62697301;
 
+    /**
+     * Method that allow to print the Calendar object in different formats
+     * @param  dateFormat  one of the DATEFORMAT ints above
+     */
     public String getDateInFormat(int dateFormat){
 
         String str = "";
@@ -152,6 +182,38 @@ public class Calendar {
         }
 
         return str;
+    }
+
+    /**
+     * Method that compares current object with the object in parameter
+     * Used in sorting
+     * @param  obj second obj which is compared to 'this' object
+     */
+    @Override
+    public int compareTo(Calendar obj){
+
+        if(this.year > obj.year)
+            return 1;
+
+        else if(this.year < obj.year)
+            return -1;
+
+        if(this.month.getOrder() > obj.month.getOrder())
+            return 1;
+
+        else if(this.month.getOrder() < obj.month.getOrder())
+            return -1;
+
+        if(this.day > obj.day )
+            return 1;
+
+        else if(this.day<obj.day)
+            return -1;
+
+        String str = this.toString();
+        String str2 = obj.toString();
+
+        return str.compareTo(str2);
 
     }
 
