@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shoutbox.ApiInterface
-import com.example.shoutbox.ExampleItem
-import com.example.shoutbox.PostModel
-import com.example.shoutbox.R
+import com.example.shoutbox.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,6 +26,7 @@ class ChatFragment : Fragment() {
     private val mAdapter: RecyclerView.Adapter<*>? = null
     private val mLayoutManager: RecyclerView.LayoutManager? = null
 
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -36,14 +36,34 @@ class ChatFragment : Fragment() {
                 ViewModelProvider(this).get(ChatViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_chat, container, false)
 
-//        val textView: TextView = root.findViewById(R.id.result)
+        // RECYCLER
+        val letList = aaa( 500)
+
+        root.findViewById<RecyclerView>(R.id.id_recyclerView).adapter = RecycleViewAdapter(letList)
+        root.findViewById<RecyclerView>(R.id.id_recyclerView).layoutManager = LinearLayoutManager(context)
+        root.findViewById<RecyclerView>(R.id.id_recyclerView).setHasFixedSize(true)
+
+
+
+        return root
+    }
+
+    private  fun aaa (size: Int): List<RecycleViewItem> {
+
+        val list = ArrayList<RecycleViewItem>()
+//
+//        for (i in 0 until size) {
+//
+//            val item = RecycleViewItem("login", "Item $i", "Line 2")
+//            list += item
+//        }
 
         // API CALL
 
         val rf = Retrofit.Builder()
-            .baseUrl(ApiInterface.base_url)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
+                .baseUrl(ApiInterface.base_url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
 
         var API = rf.create(ApiInterface::class.java)
 
@@ -54,8 +74,8 @@ class ChatFragment : Fragment() {
             }
 
             override fun onResponse(
-                call: Call<List<PostModel?>?>,
-                response: Response<List<PostModel?>?>
+                    call: Call<List<PostModel?>?>,
+                    response: Response<List<PostModel?>?>
             ) {
                 var postList: List<PostModel>? = response.body() as List<PostModel>
                 var post = arrayOfNulls<String>(postList!!.size)
@@ -64,27 +84,17 @@ class ChatFragment : Fragment() {
 
                 for (i in postList!!.indices)
                     exampleList.add(ExampleItem(postList!![i]!!.login.toString(), postList!![i]!!.date.toString(), postList!![i]!!.content.toString()))
-//                    textView.text = postList!![i]!!.content;
-//                    post[i] = postList!![i]!!.content
-
-//                mRecyclerView = root.findViewById(R.id.recyclerView)
-
-//                mRecyclerView = findViewById(R.id.recyclerView);
-//                mRecyclerView.setHasFixedSize(true);
-//                mLayoutManager = new LinearLayoutManager(this);
-//                mAdapter = new ExampleAdapter(exampleList);
-//                mRecyclerView.setLayoutManager(mLayoutManager);
-//                mRecyclerView.setAdapter(mAdapter);
-
-//                var adapter = ArrayAdapter<String>(exampleList,android.R.layout.simple_dropdown_item_1line,post)
-//                listview.adapter = adapter
 
 
-//                textView.text = "oo tak"
+                for (item in exampleList) {
+                    var x = 0;
+                    val i = RecycleViewItem(postList!![x]!!.login.toString(), postList!![x]!!.date.toString(), postList!![x]!!.content.toString())
+                    list += i
+                    x++
+                }
             }
 
         })
-
-        return root
+        return list;
     }
 }
