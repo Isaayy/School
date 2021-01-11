@@ -29,4 +29,9 @@ class RecycleViewAdapter(private val RecycleViewList: List<RecycleViewItem>) : R
         val textViewDate: TextView = itemView.findViewById(R.id.id_textViewDate)
         val textViewContent: TextView = itemView.findViewById(R.id.id_textViewContent)
     }
+
+//    fun setData(data: List<RecycleViewItem?>) {
+//
+//        notifyDataSetChanged()
+//    }
 }

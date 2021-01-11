@@ -14,12 +14,39 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/id_recyclerView"
-            android:layout_marginTop="100dp"
-            android:padding="4dp"
-            android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/recycleview_item"/>
+            android:layout_marginTop="100dp"
+            android:clipToPadding="false"
+            android:padding="4dp"
+            tools:listitem="@layout/recycleview_item" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="29dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Content" />
+
+        <Button
+            android:id="@+id/post_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="255dp"
+            android:layout_marginLeft="255dp"
+            android:layout_marginTop="28dp"
+            android:text="POST"
+            app:backgroundTint="#E91E63" />
 
     </RelativeLayout>
 

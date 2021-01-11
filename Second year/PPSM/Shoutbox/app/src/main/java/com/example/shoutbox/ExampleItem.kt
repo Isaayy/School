@@ -1,3 +1,3 @@
 package com.example.shoutbox
 
-class ExampleItem( val text1: String, val text2: String, val text3: String)
+class ExampleItem( val login: String, val date: String, val content: String)
