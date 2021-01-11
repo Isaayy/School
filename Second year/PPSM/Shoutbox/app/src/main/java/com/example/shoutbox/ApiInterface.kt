@@ -13,9 +13,6 @@ interface ApiInterface {
     @get:GET("messages")
     val posts: Call<List<PostModel?>?>?
 
-    @POST("messages")
-    suspend fun postComment(@Body requestBody: RequestBody): Response<ResponseBody>
-
     companion object {
         val base_url = "http://tgryl.pl/shoutbox/"
     }

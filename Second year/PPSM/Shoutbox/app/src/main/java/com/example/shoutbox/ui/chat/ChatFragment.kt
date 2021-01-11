@@ -47,14 +47,8 @@ class ChatFragment : Fragment() {
         // post
         val postBtn = root.findViewById(R.id.post_btn) as Button
         postBtn.setOnClickListener {
-            // your code to perform when the user clicks on the button
             val sharedPreferences = this.getActivity()?.getSharedPreferences("pref", Context.MODE_PRIVATE)
             val savedLogin = sharedPreferences?.getString("STRING_KEY",null)
-
-            val jsonObject = JSONObject()
-            jsonObject.put("content", "Jack")
-            jsonObject.put("login", "3540")
-
 
         }
 
