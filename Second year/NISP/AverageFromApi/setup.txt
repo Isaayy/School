@@ -1,0 +1,14 @@
+spring :
+add dependencies :
+	spring boot devtools
+	spring web
+generate spring
+
+open demo>pom.xml as project
+
+add new package in com.example.demo > com.example.demo.api
+
+add new class AverageApiController
+
+add maven config for spring-boot (lab4)
+
