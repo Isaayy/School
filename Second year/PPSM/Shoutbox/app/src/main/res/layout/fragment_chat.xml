@@ -6,6 +6,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="4dp">
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/pullToRefresh">
+
+        <ListView
+            android:id="@+id/listViewRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -49,5 +61,6 @@
             app:backgroundTint="#E91E63" />
 
     </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

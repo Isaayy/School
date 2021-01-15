@@ -1,19 +1,16 @@
 package com.example.shoutbox.ui.chat
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.shoutbox.*
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -42,22 +39,24 @@ class ChatFragment : Fragment() {
                 ViewModelProvider(this).get(ChatViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_chat, container, false)
 
-        val letList = aaa(root)
+        val letList = apiCallFun(root)
 
-        // post
-        val postBtn = root.findViewById(R.id.post_btn) as Button
-        postBtn.setOnClickListener {
-            val sharedPreferences = this.getActivity()?.getSharedPreferences("pref", Context.MODE_PRIVATE)
-            val savedLogin = sharedPreferences?.getString("STRING_KEY",null)
-
+        // ####################################################
+        // pull to refresh
+        val pullToRefresh: SwipeRefreshLayout = root.findViewById(R.id.pullToRefresh)
+        pullToRefresh.setOnRefreshListener {
+            Log.i("test","pull dziala")
+//            mAdapter?.notifyDataSetChanged()
+            pullToRefresh.isRefreshing = false
         }
 
         return root
 
     }
 
-
-    private fun aaa(root: View): List<RecycleViewItem> {
+    // ####################################################
+    // api call
+    private fun apiCallFun(root: View): List<RecycleViewItem> {
 
         val rf = Retrofit.Builder()
                 .baseUrl(ApiInterface.base_url)
@@ -78,11 +77,16 @@ class ChatFragment : Fragment() {
             ) {
                 for (comment in response.body()!!) {
                     if (comment != null) {
-                        val item = RecycleViewItem(comment.login.toString(),comment.date.toString(),comment.content.toString())
+                        // ####################################################
+                        // add elements from API to RecycleView
+                        val commentShort = cutString(comment.content.toString(),20)
+                        val item = RecycleViewItem(comment.login.toString(),comment.date.toString(),commentShort)
                         list += item
                     }
 
                 }
+                // ####################################################
+                // set up RecycleView
                 root.findViewById<RecyclerView>(R.id.id_recyclerView).adapter = RecycleViewAdapter(list)
                 root.findViewById<RecyclerView>(R.id.id_recyclerView).layoutManager = LinearLayoutManager(activity)
                 root.findViewById<RecyclerView>(R.id.id_recyclerView).setHasFixedSize(true)
@@ -92,4 +96,14 @@ class ChatFragment : Fragment() {
 
         return list;
     }
+}
+
+// ####################################################
+// shorter string
+public fun cutString(str: String, maxSize: Int):String{
+    var s = str;
+    s = s.substring(0, Math.min(s.length, maxSize));
+    if(s.length > maxSize)
+    s+="..."
+    return s;
 }
