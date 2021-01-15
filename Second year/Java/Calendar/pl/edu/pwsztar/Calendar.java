@@ -37,6 +37,25 @@ public class Calendar implements Comparable<Calendar>{
 
     }
 
+    Calendar(String date){
+        this(splitDate(date)[0],splitDate(date)[1],splitDate(date)[2]);
+    }
+
+    private static int[] splitDate(String date) {
+        String [] dateArr = date.split("-"); // 11-1-1999
+        try {
+            int d = Integer.parseInt(dateArr[0]);
+            int m = Integer.parseInt(dateArr[1]);
+            int y = Integer.parseInt(dateArr[2]);
+            int[] arr={d,m,y};
+            return arr;
+        }
+
+        catch (NumberFormatException er){
+            throw new dataError("Wrong data input");
+        }
+    }
+
     /**
      * Method which move current date week forward
      *
@@ -214,7 +233,15 @@ public class Calendar implements Comparable<Calendar>{
         String str2 = obj.toString();
 
         return str.compareTo(str2);
+    }
 
+    /**
+     * Method that parse string and return it as Calendar object
+     * @param  date string as date ex. 15-01-2021
+     * @return Calendar object
+     */
+    public static Calendar parse(String date){
+        return new Calendar(date);
     }
 
 

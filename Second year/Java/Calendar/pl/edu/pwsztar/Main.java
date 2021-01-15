@@ -11,15 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Calendar date0 = new Calendar(10,4,2050);
-//        System.out.println(date0.getDateInFormat(Calendar.DATEFORMAT_LONG));
-//
-//
         Calendar date1 = new Calendar(6,1,2023);
-//        System.out.println(date1.getDateInFormat(Calendar.DATEFORMAT_ROMAN));
-//        System.out.println(date1.getDayName());
-
-
         Calendar date2 = new Calendar(13,2,2017);
         Calendar date3 = new Calendar(11,11,2020);
         Calendar date4 = new Calendar(9,5,2020);
@@ -72,5 +64,20 @@ public class Main {
         for (Calendar date : datesList) {
             System.out.print(date.getDateInFormat(Calendar.DATEFORMAT_CLASSIC)+"   ");
         }
+
+        System.out.println("\n\n-----------------------------------------------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+        System.out.println("\n \nCalendar string constructor: ");
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+        Calendar date11 = new Calendar("15-01-2021");
+        System.out.println(date11.getDateInFormat(Calendar.DATEFORMAT_CLASSIC));
+
+        System.out.println("\n \nCalendar parse: ");
+        System.out.println("-----------------------------------------------------------------------------------------------------");
+
+        Calendar date12 = Calendar.parse("12-02-2021");
+        System.out.println(date12.getDateInFormat(Calendar.DATEFORMAT_CLASSIC));
     }
 }
