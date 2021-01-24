@@ -54,6 +54,9 @@ public class Calendar implements Comparable<Calendar>{
         catch (NumberFormatException er){
             throw new dataError("Wrong data input");
         }
+        catch (ArrayIndexOutOfBoundsException er){
+            throw new dataError("Too less arguments");
+        }
     }
 
     /**

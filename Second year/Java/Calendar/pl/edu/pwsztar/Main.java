@@ -11,6 +11,17 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Calendar dateNew = Calendar.parse("17-01-2021");
+        System.out.println(dateNew.getDateInFormat(Calendar.DATEFORMAT_SHORT));
+        System.out.println(dateNew.getDayName());
+
+        int size = 1004;
+        for(int i = 0 ; i < size ; i++) dateNew.weekBackward();
+
+        System.out.println(dateNew.getDateInFormat(Calendar.DATEFORMAT_SHORT));
+        System.out.println(dateNew.getDayName());
+
+
         Calendar date1 = new Calendar(6,1,2023);
         Calendar date2 = new Calendar(13,2,2017);
         Calendar date3 = new Calendar(11,11,2020);
@@ -22,8 +33,8 @@ public class Main {
         Calendar date9 = new Calendar(14,3,2018);
         Calendar date10 = new Calendar(29,8,2024);
 
-        // ######################################################
-        // SORTING ARRAY OF DATES
+//         ######################################################
+//         SORTING ARRAY OF DATES
 
         Calendar dates[]={date1,date2,date3,date4,date5,date6,date7,date8,date9,date10};
 
@@ -64,20 +75,25 @@ public class Main {
         for (Calendar date : datesList) {
             System.out.print(date.getDateInFormat(Calendar.DATEFORMAT_CLASSIC)+"   ");
         }
+//
+//        System.out.println("\n\n-----------------------------------------------------------------------------------------------------");
+//        System.out.println("-----------------------------------------------------------------------------------------------------");
+//
+//        System.out.println("\n \nCalendar string constructor: ");
+//        System.out.println("-----------------------------------------------------------------------------------------------------");
+//
+//        Calendar date11 = new Calendar("15-01-2021");
+//        System.out.println(date11.getDateInFormat(Calendar.DATEFORMAT_CLASSIC));
+//
+//        System.out.println("\n \nCalendar parse: ");
+//        System.out.println("-----------------------------------------------------------------------------------------------------");
+//
+//        Calendar date12 = Calendar.parse("12-02-2021");
+//        System.out.println(date12.getDateInFormat(Calendar.DATEFORMAT_CLASSIC));
+//
+//        System.out.println("\n \n------------------------------------------------------------------------------------------: ");
+//        System.out.println("-----------------------------------------------------------------------------------------------------");
 
-        System.out.println("\n\n-----------------------------------------------------------------------------------------------------");
-        System.out.println("-----------------------------------------------------------------------------------------------------");
 
-        System.out.println("\n \nCalendar string constructor: ");
-        System.out.println("-----------------------------------------------------------------------------------------------------");
-
-        Calendar date11 = new Calendar("15-01-2021");
-        System.out.println(date11.getDateInFormat(Calendar.DATEFORMAT_CLASSIC));
-
-        System.out.println("\n \nCalendar parse: ");
-        System.out.println("-----------------------------------------------------------------------------------------------------");
-
-        Calendar date12 = Calendar.parse("12-02-2021");
-        System.out.println(date12.getDateInFormat(Calendar.DATEFORMAT_CLASSIC));
     }
 }
