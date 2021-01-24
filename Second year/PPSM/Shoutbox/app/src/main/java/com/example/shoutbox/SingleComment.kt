@@ -58,10 +58,7 @@ class SingleComment : AppCompatActivity() {
                 val pullToRefresh: SwipeRefreshLayout = findViewById(R.id.pullToRefresh)
                 pullToRefresh.setOnRefreshListener {
                     var newComment = commentTextView.text
-                    setContentView(R.layout.fragment_chat)
-                    val adapter= findViewById<RecyclerView>(R.id.id_recyclerView)
-                    
-                    setContentView(R.layout.single_comment)
+
                     val loginTextView = findViewById<TextView>(R.id.loginTextView)
                     val commentTextView = findViewById<TextView>(R.id.commentTextView)
                     val dateTextView = findViewById<TextView>(R.id.dateTextView)

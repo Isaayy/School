@@ -46,7 +46,6 @@ class ChatFragment : Fragment() {
         val pullToRefresh: SwipeRefreshLayout = root.findViewById(R.id.pullToRefresh)
         pullToRefresh.setOnRefreshListener {
             Log.i("test","pull dziala")
-//            mAdapter?.notifyDataSetChanged()
             pullToRefresh.isRefreshing = false
         }
 
