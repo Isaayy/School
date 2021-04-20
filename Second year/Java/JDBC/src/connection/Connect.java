@@ -98,4 +98,25 @@ public class Connect {
     public List<String> getTables() {
         return this.tables;
     }
+
+    public ArrayList<ArrayList<String>> getDataFromTable(String table) throws SQLException {
+
+        Statement stmt = connection.createStatement();
+        String query = "select * from " + table;
+        ResultSet rs = stmt.executeQuery(query);
+
+        ResultSetMetaData rsmd;
+        ArrayList<ArrayList<String>> cellData = new ArrayList<>();
+
+        while (rs.next()) {
+            rsmd = rs.getMetaData();
+            ArrayList<String> innerList = new ArrayList<String>();
+
+            for (int i = 1 ; i <= rsmd.getColumnCount() ; i++){
+                innerList.add(rs.getString(i));
+            }
+            cellData.add(innerList);
+        }
+        return cellData;
+   }
 }
