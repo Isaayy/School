@@ -2,12 +2,16 @@ package service;
 
 import dao.AccountDao;
 import model.Account;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.*;
 
-
+@Component
 public class AccountService {
+
+    @Autowired
     private AccountDao accountDao;
     public AccountService()	{}
 

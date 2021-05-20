@@ -1,5 +1,6 @@
 package com.mycompany.mavenproject;
 
+import jdbc.impl.AccountServiceImp;
 import model.Account;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,10 +13,10 @@ public class DemoApplication {
 
 		ApplicationContext appCtx =
 				new ClassPathXmlApplicationContext("applicationContext.xml");
-		AccountService accountService =
-				(AccountService)appCtx.getBean("accountService");
 
-		List<Account> delinquentAccounts = accountService.findDeliquentAccounts();
+		AccountServiceImp accountServiceImp = (AccountServiceImp)appCtx.getBean("AccountServiceImp");
+
+		List<Account> delinquentAccounts = accountServiceImp.findAll();
 
 		for (Account a : delinquentAccounts)
 			System.out.println("Niesolidny to " + a.getAccountNo());

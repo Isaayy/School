@@ -8,6 +8,8 @@ public class Account	{
     private BigDecimal balance;
     private Date lastPaidOn;
 
+    public Account() {};
+
     public Account(String accountNo, BigDecimal balance, Date lastPaidOn) {
         this.accountNo = accountNo;
         this.balance = balance;
@@ -24,5 +26,17 @@ public class Account	{
 
     public Date getLastPaidOn() {
         return lastPaidOn;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
+    public void setLastPaidOn(Date lastPaidOn) {
+        this.lastPaidOn = lastPaidOn;
     }
 }
