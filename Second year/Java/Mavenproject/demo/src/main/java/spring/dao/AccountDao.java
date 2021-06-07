@@ -1,6 +1,6 @@
-package dao;
+package spring.dao;
 
-import model.Account;
+import spring.model.Account;
 import java.util.List;
 
 public interface AccountDao	{

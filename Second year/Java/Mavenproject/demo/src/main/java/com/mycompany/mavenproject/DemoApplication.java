@@ -1,10 +1,9 @@
 package com.mycompany.mavenproject;
 
-import jdbc.impl.AccountServiceImp;
-import model.Account;
+import spring.jdbc.impl.AccountServiceImp;
+import spring.model.Account;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import service.AccountService;
 
 import java.util.List;
 
@@ -19,6 +18,6 @@ public class DemoApplication {
 		List<Account> delinquentAccounts = accountServiceImp.findAll();
 
 		for (Account a : delinquentAccounts)
-			System.out.println("Niesolidny to " + a.getAccountNo());
+			System.out.println("Niesolidna osoba to: " + a.getAccountNo());
 	}
 }

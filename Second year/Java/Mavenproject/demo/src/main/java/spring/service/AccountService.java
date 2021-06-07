@@ -1,7 +1,7 @@
-package service;
+package spring.service;
 
-import dao.AccountDao;
-import model.Account;
+import spring.dao.AccountDao;
+import spring.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

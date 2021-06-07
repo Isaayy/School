@@ -1,4 +1,4 @@
-package model;
+package spring.model;
 
 import java.math.BigDecimal;
 import java.util.Date;

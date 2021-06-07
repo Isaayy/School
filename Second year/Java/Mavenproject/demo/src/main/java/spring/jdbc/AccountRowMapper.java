@@ -1,6 +1,6 @@
-package jdbc;
+package spring.jdbc;
 
-import model.Account;
+import spring.model.Account;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

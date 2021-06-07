@@ -10,13 +10,10 @@
 
     <context:component-scan base-package="spring"/>
 
-    <bean id="accountDao" class="dao.csv.CsvAccountDao">
-        <property name="csvResource" value="accounts.csv"/>
+    <bean id="accountDao" class="spring.dao.csv.CsvAccountDao">
+        <property name="csvResource" value="src/main/resources/accounts.csv"/>
     </bean>
-    <bean id="accountService" class="service.AccountService">
+    <bean id="accountService" class="spring.service.AccountService">
         <property name="accountDao" ref="accountDao"/>
-    </bean>
-    <bean id="AccountServiceImp" class="jdbc.impl.AccountServiceImp">
-        <property name="AccountServiceImp" ref="AccountServiceImp"/>
     </bean>
 </beans>

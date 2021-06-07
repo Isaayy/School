@@ -1,7 +1,7 @@
-package dao.csv;
+package spring.dao.csv;
 
-import dao.AccountDao;
-import model.Account;
+import spring.dao.AccountDao;
+import spring.model.Account;
 import org.springframework.core.io.Resource;
 
 import java.io.BufferedReader;
