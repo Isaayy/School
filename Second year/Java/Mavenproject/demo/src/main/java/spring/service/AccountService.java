@@ -7,18 +7,28 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 import java.util.*;
-
+/**
+ * Account service
+ */
 @Component
 public class AccountService {
 
     @Autowired
     private AccountDao accountDao;
+
+    /** Class constructor*/
     public AccountService()	{}
 
+    /** setAccountDao setter */
     public void setAccountDao(AccountDao accountDao) {
         this.accountDao	= accountDao;
     }
 
+    /**
+     * findDeliquentAccounts method
+     * This methods finds account that matches certain conditions
+     * @return delinquentAccounts
+     */
     public List<Account> findDeliquentAccounts() throws	Exception {
         List<Account> delinquentAccounts = new ArrayList<Account>();
         List<Account> accounts = accountDao.findAll();
@@ -35,6 +45,11 @@ public class AccountService {
         return delinquentAccounts;
     }
 
+    /**
+     * daysAgo
+     * This methods calculates how many days ago
+     * @return date time
+     */
     private	static Date daysAgo(int	days) {
         GregorianCalendar gc = new GregorianCalendar();
         gc.add(Calendar.DATE, -days);

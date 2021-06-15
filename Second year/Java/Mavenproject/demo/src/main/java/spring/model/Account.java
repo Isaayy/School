@@ -2,7 +2,9 @@ package spring.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
-
+/**
+ * Account model DTO
+ */
 public class Account	{
     private	String	accountNo;
     private BigDecimal balance;

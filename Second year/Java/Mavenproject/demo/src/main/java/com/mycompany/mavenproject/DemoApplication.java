@@ -8,6 +8,17 @@ import spring.service.AccountService;
 
 import java.util.List;
 
+/**
+ Application which contents and fetch data from database
+ Program is using beans and other spring features
+ @author Jakub Serwin
+ @version 1.0
+ */
+
+/**
+ * This is the main method which set the context of the app.
+ * @return Nothing.
+ */
 public class DemoApplication {
 	public static void main(String[] args) throws Exception {
 
