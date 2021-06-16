@@ -1,0 +1,33 @@
+.output {
+  &__label {
+    font-size: 1.5rem;
+    font-weight: 3600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__output {
+    max-width: 25rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 0.5rem;
+    outline: none;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 1.7rem;
+
+    span {
+      display: inline-block;
+      text-decoration: overline;
+    }
+  }
+}

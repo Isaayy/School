@@ -11,9 +11,9 @@ odpowiedzi
 
 #### Team
 
-> Jakub Serwin<br /> > [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/jakubserwin)
+> Jakub Serwin<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/jakubserwin)
 
-> Wojciech Sutkowski<br /> > [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/WojciechSutkowski)
+> Wojciech Sutkowski<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/WojciechSutkowski)
 
 #### Technology stack
 
@@ -30,3 +30,33 @@ Backend
 #### User interface
 
 ![NISP UI](/Projects/images/nisp-quiz.png)
+
+## Algorytmy i metody optymalizacji II
+
+### Queuing system
+
+System kolejkowy M / M / m / FIFO / ∞ / 0 (λ, μ)
+Jest to model systemu kolejkowego z nieograniczona kolejką zgłoszeń i nieograniczonym czasem
+oczekiwania w kolejce. System taki może znajdować się w stanach bez kolejki, jeśli liczba zgłoszeń
+jest mniejsza lub równa liczbie kanałów obsługi, w przeciwnym przypadku system jest w stanach z
+kolejką. System jest stabilny, jeśli spełniony jest warunek ergodyczności λ < mμ.
+
+#### Team
+
+> Robert Małek<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Robert-Mal)
+
+> Jakub Serwin<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/jakubserwin)
+
+#### Technology stack
+
+Frontend
+
+- React
+
+Backend
+
+- Spring
+
+#### User interface
+
+![NISP UI](/Projects/images/qs.png)
