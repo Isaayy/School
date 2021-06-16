@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\camera.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\maze_generator.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\shader.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stb_image.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\glad.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\shaders\normalMapping_fragment.glsl" />
+    <None Include="assets\shaders\normalMapping_vertex.glsl" />
+    <None Include="assets\shaders\skybox_fragment.glsl" />
+    <None Include="assets\shaders\skybox_vertex.glsl" />
+    <None Include="irrKlang.dll" />
+    <None Include="ikpMP3.dll" />
+    <None Include="glfw3.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\skybox\back.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\skybox\bottom.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\skybox\front.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\skybox\left.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\skybox\right.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\skybox\top.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\textures\brickwall\albedo.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\textures\brickwall\normal.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\textures\trapdoor\normal.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\textures\gravel\albedo.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\textures\gravel\normal.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+    <Image Include="assets\textures\trapdoor\albedo.jpg">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="assets\sounds\Walking-sound.mp3" />
+  </ItemGroup>
+</Project>

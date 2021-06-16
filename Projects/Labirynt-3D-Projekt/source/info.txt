@@ -1,0 +1,11 @@
+1.Ustaw Właściwości projektu
+	- Konsolidator -> Dane wejściowe
+		Dodatkowe zależności:
+			+ opengl32.lib;
+			+ GLFW\glfw3.lib;
+			+ irrKlang\irrKlang.lib;
+	- Katalogi VC++
+		Katalogi plików nagłówkowych:
+			+ $(SolutionDir)\Linking\include;
+		Katalogi bibliotek:
+			+ $(SolutionDir)\Linking\lib; 

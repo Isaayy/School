@@ -31,7 +31,7 @@ Backend
 
 ![NISP UI](/Projects/images/nisp-quiz.png)
 
-## Algorytmy i metody optymalizacji II
+## Algorytmy i metody optymalizacji
 
 ### Queuing system
 
@@ -59,4 +59,35 @@ Backend
 
 #### User interface
 
-![NISP UI](/Projects/images/qs.png)
+![Queuing system](/Projects/images/qs.png)
+
+## Grafika 3D i programowanie kart graficznych
+
+### Maze
+
+Implementacja gry polegającej na wydostaniu się z losowo generowanego
+labiryntu. Gracz po starcie pojawia się w mrocznym otoczeniu, którego charakter
+zbudowaliśmy dzięki wykorzystaniu odpowiednio dobranych tekstur a do
+dyspozycji jako jedyne źródło światła ma latarkę. Jego zadaniem jest znalezienie
+klapy w podłożu, która umożliwia mu wydostanie się z niego i zarazem kończy
+rozgrywkę zwycięstwem.
+
+#### Team
+
+> Robert Małek<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Robert-Mal)
+
+> Jakub Serwin<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/jakubserwin)
+
+> Jakub Niemiec<br /> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)]()
+
+#### Technology stack
+
+- C++
+- OpenGL
+
+#### User interface
+
+<img src="/Projects/images/maze-1.png"
+width="45%" hspace="10" vspace="10">
+<img src="/Projects/images/maze-2.png"
+width="45%" hspace="10" vspace="10">

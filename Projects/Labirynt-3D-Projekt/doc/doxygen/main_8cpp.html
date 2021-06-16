@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Labirynt 3D: Dokumentacja pliku main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Labirynt 3D
+   </div>
+   <div id="projectbrief">Projekt Grafika 3D i programowanie kart graficznych II</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a> &#124;
+<a href="#var-members">Zmienne</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Main file with the main functionality and implementation of the game.  
+<a href="#details">Więcej...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;random&gt;</code><br />
+<code>#include &quot;irrKlang/irrKlang.h&quot;</code><br />
+<code>#include &lt;glad/glad.h&gt;</code><br />
+<code>#include &lt;GLFW/glfw3.h&gt;</code><br />
+<code>#include &lt;glm/glm.hpp&gt;</code><br />
+<code>#include &lt;glm/gtc/matrix_transform.hpp&gt;</code><br />
+<code>#include &quot;shader.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="camera_8h_source.html">camera.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="maze__generator_8h_source.html">maze_generator.h</a>&quot;</code><br />
+<code>#include &quot;stb_image.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a5180f7bf2b71421af837035824a8c8ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5180f7bf2b71421af837035824a8c8ac">framebuffer_size_callback</a> (GLFWwindow *window, int width, int height)</td></tr>
+<tr class="memdesc:a5180f7bf2b71421af837035824a8c8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frame buffer size callback.  <a href="main_8cpp.html#a5180f7bf2b71421af837035824a8c8ac">Więcej...</a><br /></td></tr>
+<tr class="separator:a5180f7bf2b71421af837035824a8c8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ca2891044ac10a664b8d83ce590f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af4ca2891044ac10a664b8d83ce590f1f">mouse_callback</a> (GLFWwindow *window, double xpos, double ypos)</td></tr>
+<tr class="memdesc:af4ca2891044ac10a664b8d83ce590f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mouse callback to handle mouse position.  <a href="main_8cpp.html#af4ca2891044ac10a664b8d83ce590f1f">Więcej...</a><br /></td></tr>
+<tr class="separator:af4ca2891044ac10a664b8d83ce590f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ad2502008f16fbcf01dfaa7f7bc9ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a06ad2502008f16fbcf01dfaa7f7bc9ea">scroll_callback</a> (GLFWwindow *window, double xoffset, double yoffset)</td></tr>
+<tr class="memdesc:a06ad2502008f16fbcf01dfaa7f7bc9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle scroll.  <a href="main_8cpp.html#a06ad2502008f16fbcf01dfaa7f7bc9ea">Więcej...</a><br /></td></tr>
+<tr class="separator:a06ad2502008f16fbcf01dfaa7f7bc9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d03c6f2666863543429a06ef642fe6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2d03c6f2666863543429a06ef642fe6a">processInput</a> (GLFWwindow *window)</td></tr>
+<tr class="memdesc:a2d03c6f2666863543429a06ef642fe6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle input from keyboard.  <a href="main_8cpp.html#a2d03c6f2666863543429a06ef642fe6a">Więcej...</a><br /></td></tr>
+<tr class="separator:a2d03c6f2666863543429a06ef642fe6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a486da8aa436402387bba5a6887532dc8"><td class="memItemLeft" align="right" valign="top"><a id="a486da8aa436402387bba5a6887532dc8"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a486da8aa436402387bba5a6887532dc8">loadTexture</a> (const char *path)</td></tr>
+<tr class="memdesc:a486da8aa436402387bba5a6887532dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load texture from file. <br /></td></tr>
+<tr class="separator:a486da8aa436402387bba5a6887532dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4687e0028d8d16e3d8ef83a095a0002f"><td class="memItemLeft" align="right" valign="top"><a id="a4687e0028d8d16e3d8ef83a095a0002f"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4687e0028d8d16e3d8ef83a095a0002f">loadCubemap</a> (std::vector&lt; std::string &gt; faces)</td></tr>
+<tr class="memdesc:a4687e0028d8d16e3d8ef83a095a0002f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load texture from file. <br /></td></tr>
+<tr class="separator:a4687e0028d8d16e3d8ef83a095a0002f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b1233ef2c515de8b5b13aef8f622cd"><td class="memItemLeft" align="right" valign="top"><a id="aa0b1233ef2c515de8b5b13aef8f622cd"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa0b1233ef2c515de8b5b13aef8f622cd">isWon</a> (glm::vec3 position)</td></tr>
+<tr class="memdesc:aa0b1233ef2c515de8b5b13aef8f622cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to controll if player won the game. <br /></td></tr>
+<tr class="separator:aa0b1233ef2c515de8b5b13aef8f622cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function.  <a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Więcej...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Zmienne</h2></td></tr>
+<tr class="memitem:a74ba59acbf346c2b19bc1ce5170f755d"><td class="memItemLeft" align="right" valign="top"><a id="a74ba59acbf346c2b19bc1ce5170f755d"></a>
+const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a74ba59acbf346c2b19bc1ce5170f755d">SCR_WIDTH</a> = 1440</td></tr>
+<tr class="memdesc:a74ba59acbf346c2b19bc1ce5170f755d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Width of the game window. <br /></td></tr>
+<tr class="separator:a74ba59acbf346c2b19bc1ce5170f755d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca03a77ac5a7f2e26d08cd6de43f9a17"><td class="memItemLeft" align="right" valign="top"><a id="aca03a77ac5a7f2e26d08cd6de43f9a17"></a>
+const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aca03a77ac5a7f2e26d08cd6de43f9a17">SCR_HEIGHT</a> = 900</td></tr>
+<tr class="memdesc:aca03a77ac5a7f2e26d08cd6de43f9a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the game window. <br /></td></tr>
+<tr class="separator:aca03a77ac5a7f2e26d08cd6de43f9a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efc6ee0d37b111ad537859be2ba57dc"><td class="memItemLeft" align="right" valign="top"><a id="a9efc6ee0d37b111ad537859be2ba57dc"></a>
+<a class="el" href="class_maze__generator.html">Maze_generator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9efc6ee0d37b111ad537859be2ba57dc">maze</a></td></tr>
+<tr class="memdesc:a9efc6ee0d37b111ad537859be2ba57dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maze object - rendered maze. <br /></td></tr>
+<tr class="separator:a9efc6ee0d37b111ad537859be2ba57dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368e52f7076ab52ad06c2dc9a5a3b7f1"><td class="memItemLeft" align="right" valign="top"><a id="a368e52f7076ab52ad06c2dc9a5a3b7f1"></a>
+<a class="el" href="class_camera.html">Camera</a>&#160;</td><td class="memItemRight" valign="bottom"><b>camera</b> (<a class="el" href="main_8cpp.html#a9efc6ee0d37b111ad537859be2ba57dc">maze</a>)</td></tr>
+<tr class="separator:a368e52f7076ab52ad06c2dc9a5a3b7f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4664c5d930c290e6f82141a070cbea46"><td class="memItemLeft" align="right" valign="top"><a id="a4664c5d930c290e6f82141a070cbea46"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a4664c5d930c290e6f82141a070cbea46">lastX</a> = (float)<a class="el" href="main_8cpp.html#a74ba59acbf346c2b19bc1ce5170f755d">SCR_WIDTH</a> / 2.0</td></tr>
+<tr class="memdesc:a4664c5d930c290e6f82141a070cbea46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse support variable. <br /></td></tr>
+<tr class="separator:a4664c5d930c290e6f82141a070cbea46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d5b8dfd025caf1c0ed043132515f587"><td class="memItemLeft" align="right" valign="top"><a id="a9d5b8dfd025caf1c0ed043132515f587"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9d5b8dfd025caf1c0ed043132515f587">lastY</a> = (float)<a class="el" href="main_8cpp.html#aca03a77ac5a7f2e26d08cd6de43f9a17">SCR_HEIGHT</a> / 2.0</td></tr>
+<tr class="memdesc:a9d5b8dfd025caf1c0ed043132515f587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle mouse support variable. <br /></td></tr>
+<tr class="separator:a9d5b8dfd025caf1c0ed043132515f587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21731ba101e28334c34543121caa841"><td class="memItemLeft" align="right" valign="top"><a id="ac21731ba101e28334c34543121caa841"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac21731ba101e28334c34543121caa841">firstMouse</a> = true</td></tr>
+<tr class="memdesc:ac21731ba101e28334c34543121caa841"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable which helps to prevent shaking screen after first run <br /></td></tr>
+<tr class="separator:ac21731ba101e28334c34543121caa841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a61318ed6aa02b4ff346e7eb8f68891"><td class="memItemLeft" align="right" valign="top"><a id="a1a61318ed6aa02b4ff346e7eb8f68891"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1a61318ed6aa02b4ff346e7eb8f68891">deltaTime</a> = 0.0f</td></tr>
+<tr class="memdesc:a1a61318ed6aa02b4ff346e7eb8f68891"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable which helps with the movement speed on all devices <br /></td></tr>
+<tr class="separator:a1a61318ed6aa02b4ff346e7eb8f68891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a518a497d888d805d5f368bbb91b54a6c"><td class="memItemLeft" align="right" valign="top"><a id="a518a497d888d805d5f368bbb91b54a6c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a518a497d888d805d5f368bbb91b54a6c">lastFrame</a> = 0.0f</td></tr>
+<tr class="memdesc:a518a497d888d805d5f368bbb91b54a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable which helps with the movement speed on all devices <br /></td></tr>
+<tr class="separator:a518a497d888d805d5f368bbb91b54a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5f6c44e2683b6f081ffe373bdb144b6"><td class="memItemLeft" align="right" valign="top"><a id="ab5f6c44e2683b6f081ffe373bdb144b6"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ab5f6c44e2683b6f081ffe373bdb144b6">isMusic</a> = false</td></tr>
+<tr class="memdesc:ab5f6c44e2683b6f081ffe373bdb144b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to controll if music is playing. <br /></td></tr>
+<tr class="separator:ab5f6c44e2683b6f081ffe373bdb144b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153e0046d5309d8c8132549f1dbe2843"><td class="memItemLeft" align="right" valign="top"><a id="a153e0046d5309d8c8132549f1dbe2843"></a>
+irrklang::ISoundEngine *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a153e0046d5309d8c8132549f1dbe2843">engine</a> = irrklang::createIrrKlangDevice()</td></tr>
+<tr class="memdesc:a153e0046d5309d8c8132549f1dbe2843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sound engine. <br /></td></tr>
+<tr class="separator:a153e0046d5309d8c8132549f1dbe2843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Main file with the main functionality and implementation of the game. </p>
+</div><h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a5180f7bf2b71421af837035824a8c8ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5180f7bf2b71421af837035824a8c8ac">&#9670;&nbsp;</a></span>framebuffer_size_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void framebuffer_size_callback </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Frame buffer size callback. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>A GLFW window object pointer </td></tr>
+    <tr><td class="paramname">width</td><td>A frame width integer </td></tr>
+    <tr><td class="paramname">height</td><td>A frame height integer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main function. </p>
+<dl class="section author"><dt>Autor</dt><dd>Robert Małek, Jakub Niemiec, Jakub Serwin </dd></dl>
+<dl class="section return"><dt>Zwraca</dt><dd>an integer 0 upon exit success </dd></dl>
+
+</div>
+</div>
+<a id="af4ca2891044ac10a664b8d83ce590f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ca2891044ac10a664b8d83ce590f1f">&#9670;&nbsp;</a></span>mouse_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mouse_callback </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xpos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ypos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mouse callback to handle mouse position. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>A GLFW window object pointer </td></tr>
+    <tr><td class="paramname">xpos</td><td>A float number of the mouse position in X axis </td></tr>
+    <tr><td class="paramname">ypos</td><td>A float number of the mouse position in Y axis </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a2d03c6f2666863543429a06ef642fe6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d03c6f2666863543429a06ef642fe6a">&#9670;&nbsp;</a></span>processInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void processInput </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle input from keyboard. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>A GLFW window object pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a06ad2502008f16fbcf01dfaa7f7bc9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ad2502008f16fbcf01dfaa7f7bc9ea">&#9670;&nbsp;</a></span>scroll_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scroll_callback </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xoffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yoffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle scroll. </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>A GLFW window object pointer </td></tr>
+    <tr><td class="paramname">xoffset</td><td>- x off set </td></tr>
+    <tr><td class="paramname">yoffset</td><td>- y off set </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>void </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
