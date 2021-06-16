@@ -1,0 +1,110 @@
+// ############################
+// FONT
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --font-size: 1.7rem;
+  --heading: calc(var(--font-size) * 1.4);
+}
+
+@media (max-width: 37.5em) {
+  :root {
+    --font-size: 1.5rem;
+    --heading: calc(var(--font-size) * 1.3);
+  }
+}
+
+// ############################
+// COLORS
+
+// Gradient
+$primary-gradient: linear-gradient(to right bottom, #cf3a69, #cb4a99, #b363c6, #847eea, #0496ff);
+$category-gradient: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+// Accent
+$green: #0ab41b;
+$dark-pink: #dc0073;
+
+// Neutral
+$white: #ffffff;
+$light-gray: #fafafa;
+$dark: #1c1818;
+
+// ############################
+// SPACING
+
+$margin-big: 7rem;
+$margin-medium: 5rem;
+$margin-small: 2.5rem;
+$margin-small-mobile: 1.5rem;
+
+// ############################
+// MIXIN
+
+@mixin background($imgpath) {
+  background: {
+    image: $category-gradient, url($imgpath);
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+
+// ############################
+// GENERAL SETTINGS
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+// ############################
+// ANIMATIONS
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ############################
+// classes used by JavaScript
+
+.hide {
+  display: none !important;
+}
+
+.move-left {
+  transition: all 0.3s;
+  transform: translateX(-55rem);
+}
+
+.active {
+  border: 2px solid $green !important;
+  background-color: lighten($green, 40%) !important;
+}

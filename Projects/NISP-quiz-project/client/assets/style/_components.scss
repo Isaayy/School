@@ -1,0 +1,75 @@
+.logo {
+  margin-bottom: $margin-big;
+  animation: 1s ease-in reveal;
+}
+
+.heading {
+  margin-bottom: $margin-medium;
+  font: 400 var(--heading) 'Open sans', sans-serif;
+  color: white;
+  animation: 1.2s ease-in reveal;
+}
+
+.categories__category {
+  position: relative;
+  height: 20rem;
+  width: 40rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    filter: brightness(60%);
+  }
+
+  p {
+    font: 600 var(--font-size) 'Open sans', sans-serif;
+    color: white;
+  }
+
+  &--football {
+    @include background('../img/football.jpg');
+  }
+
+  &--programming {
+    @include background('../img/programming.png');
+  }
+
+  &--movies {
+    @include background('../img/movies.jpg');
+  }
+
+  &--geography {
+    @include background('../img/geography.png');
+  }
+
+  &--series {
+    @include background('../img/series.jpg');
+  }
+
+  &--gaming {
+    @include background('../img/gaming.png');
+  }
+}
+
+.question {
+  &__answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.6rem;
+
+    &:hover {
+      background-color: rgb(230, 230, 230);
+    }
+  }
+}

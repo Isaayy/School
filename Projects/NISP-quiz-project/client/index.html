@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Choose your favorite category and try-out yourself!" />
+    <meta name="keywords" content="quiz, football, movies, series, geography, programming, gaming" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <title>Quizzy</title>
+    <link rel="stylesheet" href="./assets/style/main.css" />
+    <script defer type="module" src="./assets/js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <img class="container__wave" src="assets/img/wave.svg" />
+      <img class="container__blob" src="assets/img/blob.svg" />
+      <img class="container__star" src="assets/img/star.svg" />
+      <img class="container__circle" src="assets/img/circle.svg" />
+      <img class="container__leaf" src="assets/img/leaf.svg" />
+
+      <header class="logo">
+        <img src="assets/img/logo.svg" />
+      </header>
+
+      <h2 class="heading">
+        <p>Choose your favorite category and try-out yourself</p>
+      </h2>
+
+      <!-- 
+        ######################################################
+        ## Categories 
+        ######################################################
+       -->
+      <main class="categories">
+        <div class="categories__category categories__category--football" data-category="football">
+          <p>Football</p>
+        </div>
+
+        <div class="categories__category categories__category--programming" data-category="programming">
+          <p>Programming</p>
+        </div>
+
+        <div class="categories__category categories__category--movies" data-category="movies">
+          <p>Movies</p>
+        </div>
+
+        <div class="categories__category categories__category--geography" data-category="geography">
+          <p>Geography</p>
+        </div>
+
+        <div class="categories__category categories__category--series" data-category="series">
+          <p>Series</p>
+        </div>
+
+        <div class="categories__category categories__category--gaming" data-category="gaming">
+          <p>Gaming</p>
+        </div>
+      </main>
+
+      <!-- 
+        ######################################################
+        ## Questions 
+        ######################################################
+       -->
+      <div class="question hide">
+        <div class="question__category">
+          <p></p>
+        </div>
+
+        <div class="question__number">
+          <p>1/10</p>
+        </div>
+
+        <div class="question__question">
+          <p></p>
+        </div>
+
+        <div class="question__answers">
+          <div class="question__answer" data-answer="1"></div>
+
+          <div class="question__answer" data-answer="2"></div>
+
+          <div class="question__answer" data-answer="3"></div>
+
+          <div class="question__answer" data-answer="4"></div>
+        </div>
+
+        <div class="question__actions">
+          <p class="total-points"></p>
+          <p class="next-queston">
+            Next question
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.54688 4.59375L13.4531 10.5L7.54688 16.4062"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </p>
+        </div>
+      </div>
+
+      <!-- 
+        ######################################################
+        ## Results 
+        ######################################################
+       -->
+      <div class="results hide">
+        <div class="results__congrats">
+          <p>Congratulations you have finished the quiz</p>
+        </div>
+
+        <div class="results__getPDF">
+          <p>GET FULL RESULTS IN PDF</p>
+        </div>
+
+        <div class="results__restart">
+          <p>PLAY AGAIN</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+com.example.demo
+com.example.demo.components
+com.example.demo.controller
+com.example.demo.dto
+com.example.demo.services
+com.example.demo.services.impl

@@ -1,0 +1,11 @@
+ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWERS;POINTS
+1;What does HTML stand for?;Hyper Trainer Marking Language;Hyper Text Marketing Language;Hyper Text Markup Language;Hyper Text Markup Leveler;3;1
+2;What is FIFO?;First in Few Out;Few In Few out;First In First Out;Few In First Out;3;1
+3;What do shell windows show in Python?;Code;Program output;IDLE;Print command;2;1
+4;Which of these are programming languages?;Java;Banana;Ruby;Pomelo;1,3;2
+5;What are people who write computer code called?;Gods;Professors;Cryptographers;Programmers;4;1
+6;What is the only thing that computers understand?;Machine code;High level languages;Low level languages;Algorithms;1;2
+7;Which of the following are not high level programming languages?;C++;Assembly;Java;Python;2;2
+8;Which software is restricted on its use or modification?;Freeware;Shareware;Open source;Closed source;4;2
+9;Which utility program frees up space on the disk by reorganising it?;Anti-virus;Firewall;Defragmentation;System clean up;3;2
+10;Why is binary code used?;It makes it harder to hack into;It makes computers run faster;It was the first code ever invented;Because why not;2;2
