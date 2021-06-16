@@ -29,4 +29,4 @@ Backend
 
 #### User interface
 
-![NISP UI](/images/nisp-quiz.png)
+![NISP UI](/Projects/images/nisp-quiz.png)
